@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#F3F0EB"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/selectedItemsTextView"
+        android:text="已選擇：無"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sideDishRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="488dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical" />
+
+    <Button
+        android:id="@+id/btnConfirm"
+        android:text="☑️ 完成選擇"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#A8A6B6"
+        android:textColor="#FFFFFF" />
+
+
+    <Button
+        android:id="@+id/btnBackToMain"
+        android:text="返回主畫面"
+        android:backgroundTint="#D8CFC4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp" />
+</LinearLayout>

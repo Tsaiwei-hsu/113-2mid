@@ -1,0 +1,110 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#E5E1DC"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 可滑動內容放 ScrollView -->
+    <ScrollView
+        android:id="@+id/scrollArea"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomButtons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- 標題 -->
+            <TextView
+                android:id="@+id/mainTitleTextView"
+                android:text="🍽 我的點餐系統"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp" />
+
+            <!-- 三個選擇按鈕 -->
+            <Button
+                android:id="@+id/orderMainDishButton"
+                android:text="選擇主餐 🍕"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#A3B1BF"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/orderSideDishButton"
+                android:text="選擇副餐 🍟"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#CFA1B2"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/viewRestaurantsButton"
+                android:text="查看店家 🏪"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#A9B7C0"
+                android:layout_marginBottom="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- 訂單摘要 -->
+            <TextView
+                android:id="@+id/orderSummaryTextView"
+                android:text="【已選主餐】\n尚未選擇主餐\n\n【已選副餐】\n尚未選擇副餐\n\n共 0 項，總金額：$0"
+                android:textColor="#444444"
+                android:textSize="15sp"
+                android:padding="16dp"
+                android:background="#FFFFFF"
+                android:elevation="2dp"
+                android:layout_marginBottom="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 底部固定操作欄 -->
+    <LinearLayout
+        android:id="@+id/bottomButtons"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="#FAFAFA"
+        android:elevation="4dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/clearOrderButton"
+            android:text="🧽 清空餐點"
+            android:textColor="#555555"
+            android:backgroundTint="#E0E0E0"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/checkoutButton"
+            android:text="🧾 結帳"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FFB74D"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

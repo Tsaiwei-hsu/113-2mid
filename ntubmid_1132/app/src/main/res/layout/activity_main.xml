@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <!-- 標題 -->
+    <TextView
+        android:id="@+id/mainTitleTextView"
+        android:text="🍽 我的點餐系統"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+
+    <!-- 選擇主餐 -->
+    <Button
+        android:id="@+id/btnMainDish"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#64B5F6"
+        android:text="選擇主餐 🍕"
+        android:textColor="#C09D9B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainTitleTextView"
+        tools:ignore="DuplicateClickableBoundsCheck" />
+
+    <!-- 選擇副餐 -->
+    <!-- 查看店家 -->
+    <Button
+        android:id="@+id/btnSideDish"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:backgroundTint="#64B5F6"
+        android:text="選擇副餐 🍕"
+        android:textColor="#C09D9B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainTitleTextView" />
+
+    <Button
+        android:id="@+id/btnRestaurant"
+        android:text="查看店家 🏪"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#4FC3F7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        tools:ignore="MissingConstraints" />
+
+    <!-- 訂單摘要 -->
+    <TextView
+        android:id="@+id/orderSummaryTextView"
+        android:layout_width="380dp"
+        android:layout_height="404dp"
+        android:background="#FFFFFF"
+        android:elevation="2dp"
+        android:padding="16dp"
+        android:text="【已選主餐】\n尚未選擇主餐\n\n【已選副餐】\n尚未選擇副餐\n\n共 0 項，總金額：$0"
+        android:textColor="#444444"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomButtons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSideDish" />
+
+    <!-- 底部固定按鈕列 -->
+    <LinearLayout
+        android:id="@+id/bottomButtons"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="#FAFAFA"
+        android:elevation="4dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/clearOrderButton"
+            android:text="🧽 清空餐點"
+            android:textColor="#555555"
+            android:backgroundTint="#E0E0E0"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/checkoutButton"
+            android:text="🧾 結帳"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FFB74D"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
